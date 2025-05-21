@@ -11,6 +11,7 @@ import Register from "../components/Register";
 import ErrorPage from "../components/Error";
 import PrivateRoute from "../components/PrivateRoute";
 import MyGroup from "../components/MyGroup";
+import HobbyDetails from "../components/HobbyDetails";
 
 
 
@@ -53,6 +54,11 @@ const router = createBrowserRouter([
         {
             path:'/*',
             Component:ErrorPage,
+        },
+        {
+            path:'hobby/:id',
+            Component:HobbyDetails,
+
         }
         
 
