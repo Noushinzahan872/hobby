@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../contexts/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
+
+  const{user,logOut}=use(AuthContext);
+const handleLogOut=()=>{
+  // console.log('usertrying')
+  logOut()
+  .then(()=>{
+    // alert('your logged out successful')
+    Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: 'User logout successfully'
+              });
+
+  })
+  .catch((error)=>{
+    console.log(error)
+  })
+
+}
+
     return (
         <div>
             
@@ -110,18 +132,22 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="navbar-end flex gap-2">
-{/* <img className='w-12 rounded-full' src={`${user ? user.photoURL:userImage}`} alt=""/>
 
+
+     <div className="navbar-end flex gap-2">
+
+
+<img className='w-12 rounded-full' src={`${user ? user.photoURL:''}`} alt=""/>
 
 { user?(<button onClick={handleLogOut} className=' btn btn-primary rounded'>LogOut</button>):
+(<Link to='/login' className="btn  md:block lg:block btn btn-primary rounded">Login</Link>)}
+        
+      </div> 
 
-(<Link to='/auth/login' className="btn  md:block lg:block btn btn-primary rounded">login</Link>)
-      </div>  */} 
 
-        </div>
-        <Link to='/login' className="btn  md:block lg:block btn btn-primary rounded">login</Link>
-        </div>
+
+
+        </div> 
 
         </div>
     );

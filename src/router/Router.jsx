@@ -6,10 +6,12 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../components/Home";
 import AllGroup from "../components/AllGroup";
 import CreateGroup from "../components/CreateGroup";
-import MyGroup from "../components/MyGroup";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import ErrorPage from "../components/Error";
+import PrivateRoute from "../components/PrivateRoute";
+import MyGroup from "../components/MyGroup";
+
 
 
 
@@ -34,7 +36,11 @@ const router = createBrowserRouter([
         {
             path:'myGroup',
             loader:()=>fetch('http://localhost:3000/users/'),
-            Component:MyGroup,
+            element:(
+              <PrivateRoute>
+                <MyGroup></MyGroup>
+              </PrivateRoute>
+            ),
         },
         {
             path:'login',
