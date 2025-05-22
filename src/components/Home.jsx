@@ -14,9 +14,14 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'> 
-                {
+                {/* {
                 hobbes?.map(hobby=><HobbyCard key={hobby._id} hobby={hobby}></HobbyCard>)
-                }     
+                }      */}
+                 {
+            hobbes?.slice(0, 6).map(hobby => (
+              <HobbyCard key={hobby._id} hobby={hobby} />
+            ))
+          }
             </div>   
             <BlogSection></BlogSection>
             <AboutUs></AboutUs>

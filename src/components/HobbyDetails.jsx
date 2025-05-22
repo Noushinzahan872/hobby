@@ -6,6 +6,11 @@ const HobbyDetails = () => {
 
 const group = useLoaderData();
 
+const today = new Date();
+  const groupStartDate = new Date(group.startDate);
+  const isGroupActive = groupStartDate >= today;
+
+
     return (
         <div>
        <div className="min-h-screen bg-gray-100 flex justify-center items-center px-6 py-10">
@@ -45,10 +50,23 @@ const group = useLoaderData();
            {group.startDate}
           </div>
 
-          <div className="pt-4">
+          <div className="pt-4 flex flex-wrap gap-4 items-center">
             <Link to="/allGroup" className="btn btn-primary">
               Back AllGroups
             </Link>
+
+ {!isGroupActive && (
+                <span className="text-red-600 font-semibold">
+                  ❌ This group is no longer active.
+                </span>
+              )}
+
+              {isGroupActive && (
+                <button className="btn btn-primary">
+                  ✅ Join Group
+                </button>
+              )}
+
           </div>
         </div>
       </div>
