@@ -13,6 +13,11 @@
 
 
 import React from 'react';
+import image from '../assets/f6305174-1181-4c5b-bc1a-1ecde329ec06.jpeg'
+import hobby from '../assets/42398a6d-3e36-467c-85cc-66b07ce41330.jpeg';
+import  running from '../assets/c90c51f2-92ea-4878-8572-4f7293c5f053.jpeg'
+import  cocking from '../assets/f09d34de-dbb3-4445-80f9-dd55a19e4424.jpeg'
+
 
 const Banner = () => {
 
@@ -46,7 +51,7 @@ const Banner = () => {
           
           {/* Slide 1 */}
           <div id="slide1" className="carousel-item relative w-full">
-            <img src="" className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
+            <img src={image} className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
               <a href="#slide4" className="btn btn-circle">❮</a>
               <a href="#slide2" className="btn btn-circle">❯</a>
@@ -55,7 +60,7 @@ const Banner = () => {
 
           {/* Slide 2 */}
           <div id="slide2" className="carousel-item relative w-full">
-            <img src="" className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
+            <img src={running} className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
               <a href="#slide1" className="btn btn-circle">❮</a>
               <a href="#slide3" className="btn btn-circle">❯</a>
@@ -64,7 +69,7 @@ const Banner = () => {
 
           {/* Slide 3 */}
           <div id="slide3" className="carousel-item relative w-full">
-            <img src="" className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
+            <img src={cocking} className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
               <a href="#slide2" className="btn btn-circle">❮</a>
               <a href="#slide4" className="btn btn-circle">❯</a>
@@ -73,7 +78,7 @@ const Banner = () => {
 
           {/* Slide 4 */}
           <div id="slide4" className="carousel-item relative w-full">
-            <img src="" className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
+            <img src={hobby} className="w-full h-64 md:h-[400px] object-cover rounded-xl" />
             <div className="absolute left-5 right-5 top-1/2 flex justify-between transform -translate-y-1/2">
               <a href="#slide3" className="btn btn-circle">❮</a>
               <a href="#slide1" className="btn btn-circle">❯</a>

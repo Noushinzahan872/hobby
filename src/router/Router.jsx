@@ -23,6 +23,7 @@ const router = createBrowserRouter([
     children:[
         {
             index:true,
+            loader:()=>fetch('http://localhost:3000/hobbes'),
             Component:Home,
         },
         {
@@ -32,11 +33,13 @@ const router = createBrowserRouter([
         },
         {
             path:'createGroup',
-            Component:CreateGroup,
+            element:(<PrivateRoute>
+                <CreateGroup></CreateGroup>
+            </PrivateRoute>),
         },
         {
             path:'myGroup',
-            loader:()=>fetch('http://localhost:3000/users/'),
+            loader:()=>fetch('http://localhost:3000/hobbes/'),
             element:(
               <PrivateRoute>
                 <MyGroup></MyGroup>

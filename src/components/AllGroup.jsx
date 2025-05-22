@@ -9,7 +9,7 @@ const AllGroup = () => {
         <div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'> 
                 {
-                hobbes.map(hobby=><HobbyCard key={hobby._id} hobby={hobby}></HobbyCard>)
+                hobbes?.map(hobby=><HobbyCard key={hobby._id} hobby={hobby}></HobbyCard>)
                 }     
             </div>
         </div>

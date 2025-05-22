@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const HobbyCard = ({hobby}) => {
-    const {_id,groupName,startDate,imageUrl} =hobby;
+    const {_id,groupName,startDate,imageUrl,maxMembers,category} =hobby;
 
     return (
         <div>
@@ -12,10 +12,17 @@ const HobbyCard = ({hobby}) => {
   <div className="p-4">
     <h2 className="text-xl font-bold mb-2">{groupName}</h2>
     <p className="text-gray-900 text-sm mb-2">
-      {startDate}
+     Category: {category}
     </p>
+    <p className="text-gray-900 text-sm mb-2">
+      Members:{maxMembers}
+    </p>
+    <p className="text-gray-900 text-sm mb-2">
+     Deadline: {startDate}
+    </p>
+
     <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-      <span>Difficulty: Medium</span>
+    
     </div>
     <Link to={`/hobby/${_id}`}>
     <button className="w-full bg-blue-600 text-white py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">

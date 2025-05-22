@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../contexts/AuthProvider';
 import Swal from 'sweetalert2';
+import logo from '../assets/4b5591da-dab0-4ac8-80fb-3def19dbabd6.jpeg'
 
 const Navbar = () => {
 
@@ -89,9 +90,12 @@ const handleLogOut=()=>{
 
             </ul>
           </div>
-          <Link to="/" className="font-bold text-xl">
+          {/* <Link to="/" className="font-bold text-xl">
            Hobby-Hub
-          </Link>
+          </Link> */}
+          <div className='w-[80px]'>
+            <img src={logo} alt="logo"></img>
+          </div>
         </div>
   
         <div className="navbar-center hidden lg:flex">
