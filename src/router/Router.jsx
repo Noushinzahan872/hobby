@@ -57,7 +57,13 @@ const router = createBrowserRouter([
         },
         {
             path:'hobby/:id',
-            Component:HobbyDetails,
+            loader: ({ params }) => fetch(`http://localhost:3000/hobbes/${params.id}`).then(res => res.json()),
+            element:(
+                <PrivateRoute>
+                    <HobbyDetails></HobbyDetails>
+                </PrivateRoute>
+            )
+            
 
         }
         
