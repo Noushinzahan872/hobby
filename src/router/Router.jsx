@@ -12,6 +12,7 @@ import ErrorPage from "../components/Error";
 import PrivateRoute from "../components/PrivateRoute";
 import MyGroup from "../components/MyGroup";
 import HobbyDetails from "../components/HobbyDetails";
+import UpdateGroup from "../components/UpdateGroup";
 
 
 
@@ -65,9 +66,12 @@ const router = createBrowserRouter([
                 <PrivateRoute>
                     <HobbyDetails></HobbyDetails>
                 </PrivateRoute>
-            )
-            
-
+            ) 
+        },
+        {
+            path:'updateGroup/:id',
+             loader: ({ params }) => fetch(`http://localhost:3000/hobbes/${params.id}`).then(res => res.json()),
+            Component:UpdateGroup
         }
         
 

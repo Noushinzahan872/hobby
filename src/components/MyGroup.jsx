@@ -114,7 +114,7 @@ const MyGroup = () => {
                   />
                 </Link>
                 <Link
-                  to={`/update-group/${group._id}`}
+                  to={`/updateGroup/${group._id}`}
                   className=" rounded-full join-item"
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content={"Edit Group"}
