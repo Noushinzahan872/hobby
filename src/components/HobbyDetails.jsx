@@ -1,3 +1,4 @@
+import Footer from 'daisyui/components/footer';
 import React from 'react';
 import { Link, useLoaderData } from 'react-router';
 
@@ -54,7 +55,7 @@ const group = useLoaderData();
 
 </div>
 </div>
-       
+       <Footer></Footer>
        
         </div>
     );

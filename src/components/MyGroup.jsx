@@ -10,7 +10,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const MyGroup = () => {
-  const { user } = useContext(AuthContext);
+  const { user,_id} = useContext(AuthContext);
   const [groups, setGroups] = useState([]);
 //   const [loading, setLoading] = useState(true);
 
@@ -49,9 +49,14 @@ const MyGroup = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-              setGroups((prevGroups) =>
-                prevGroups.filter((group) => group._id !== id)
-              );
+       
+                       const remainingUsers = groups.filter(group => group._id !== id);
+                             setGroups(remainingUsers);     
+
+            //   setGroups((prevGroups) =>
+            //     prevGroups.filter((group) => group._id !== id)
+            //   );
+
               Swal.fire("Deleted!", "Your group has been deleted.", "success");
             }
           });
@@ -60,6 +65,7 @@ const MyGroup = () => {
   };
 
   return (
+    <>
     <div className="px-4 sm:px-6 md:px-12 lg:px-24 py-12 overflow-x-auto">
       <h2 className="text-3xl font-bold text-center mb-8">My Groups</h2>
 
@@ -95,7 +101,7 @@ const MyGroup = () => {
 
               <td className="join join-vertical space-y-3 p-2">
                 <Link
-                  to={`/details-group/${group._id}`}
+                  to={`/details-group/${group.id}`}
                   className=" rounded-full join-item"
                   data-tooltip-id="my-tooltip"
                   data-tooltip-content={"See More Info"}
@@ -139,6 +145,8 @@ const MyGroup = () => {
         </tbody>
       </table>
     </div>
+   
+    </>
   );
 };
 

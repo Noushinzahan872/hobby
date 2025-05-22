@@ -5,6 +5,7 @@ import { FaUser, FaEnvelope } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../contexts/AuthProvider';
 
+
 const CreateGroup = () => {
   const { user } = useContext(AuthContext); 
 
@@ -62,6 +63,7 @@ const CreateGroup = () => {
   };
 
   return (
+    <>
     <div className="bg-gray-100 min-h-screen py-10 px-4">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center text-indigo-700 mb-8">🎯 Create a New Hobby Group</h2>
@@ -213,6 +215,8 @@ const CreateGroup = () => {
         </form>
       </div>
     </div>
+   
+    </>
   );
 };
 
