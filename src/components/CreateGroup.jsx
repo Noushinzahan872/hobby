@@ -5,6 +5,7 @@ import { FaUser, FaEnvelope } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../contexts/AuthProvider';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 
 const CreateGroup = () => {
@@ -219,7 +220,7 @@ const CreateGroup = () => {
         </form>
       </div>
     </div>
-   
+   <Footer></Footer>
     </>
   );
 };

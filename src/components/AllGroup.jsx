@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router';
 import HobbyCard from './HobbyCard';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 
 
@@ -23,7 +24,7 @@ const AllGroup = () => {
             </div>
             
         </div>
-       
+       <Footer></Footer>
         </>
     );
 };
