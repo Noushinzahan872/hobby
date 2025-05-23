@@ -17,7 +17,7 @@ const MyGroup = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/hobbes`)
+      fetch(`http://localhost:3000/hobbes?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setGroups(data);
@@ -87,7 +87,7 @@ const MyGroup = () => {
           </tr>
         </thead>
         <tbody className="text-center">
-          {groups.slice(0,5).map((group, index) => (
+          {groups.map((group, index) => (
             <tr key={group._id}>
               <td>{index + 1}</td>
               <td className="font-semibold text-nowrap">{group.groupName}</td>
