@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { AuthContext } from '../contexts/AuthProvider';
 import { useParams } from 'react-router';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer';
 
 
 const UpdateGroup = () => {
@@ -230,6 +231,7 @@ const UpdateGroup = () => {
         </form>
       </div>
     </div>
+    <Footer></Footer>
     </>
   );
 };
