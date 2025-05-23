@@ -18,10 +18,11 @@ const MyGroup = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/hobbes?email=${user.email}`)
+      fetch(`http://localhost:3000/hobbe/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setGroups(data);
+          console.log(data)
         //   setLoading(false);
         });
     }
