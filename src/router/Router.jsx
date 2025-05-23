@@ -71,7 +71,11 @@ const router = createBrowserRouter([
         {
             path:'updateGroup/:id',
              loader: ({ params }) => fetch(`http://localhost:3000/hobbes/${params.id}`).then(res => res.json()),
-            Component:UpdateGroup
+           element:(
+                <PrivateRoute>
+                    <UpdateGroup></UpdateGroup>
+                </PrivateRoute>
+            ) 
         }
         
 

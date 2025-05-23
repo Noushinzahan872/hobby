@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import HobbyCard from './HobbyCard';
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -9,6 +11,9 @@ const AllGroup = () => {
     console.log(hobbes);
     return (
         <>
+        <Helmet>
+            <title>AllGroup</title>
+        </Helmet>
         <div>
             <h2 className="text-3xl font-bold text-center mb-8">All Groups</h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'> 

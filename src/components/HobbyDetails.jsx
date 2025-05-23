@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData } from 'react-router';
 
 const HobbyDetails = () => {
@@ -13,7 +14,10 @@ const today = new Date();
 
     return (
         <div>
-       <div className="min-h-screen bg-gray-100 flex justify-center items-center px-6 py-10">
+          <Helmet>
+            <title>Details-Page</title>
+          </Helmet>
+       <div className="min-h-screen flex justify-center items-center px-6 py-10">
   <div className="card lg:card-side bg-base-100 shadow-xl max-w-5xl w-full rounded-xl overflow-hidden">
 
 <div className="card lg:card-side bg-base-100 shadow-xl max-w-5xl w-full rounded-xl overflow-hidden">

@@ -22,7 +22,7 @@ const articles = [
 
 const BlogSection = () => {
   return (
-    <section className="bg-gray-50 py-16 px-6 md:px-20">
+    <section className="py-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         {/* Lottie Animation */}
@@ -37,20 +37,20 @@ const BlogSection = () => {
 
         {/* Blog Cards */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">Latest <span className="text-purple-600">Articles</span></h2>
+          <h2 className="text-4xl font-bold mb-6">Latest <span className="text-blue-800">Articles</span></h2>
           <div className="space-y-6">
             {articles.map((article, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition border-l-4 border-purple-500"
+                className="p-6 rounded-xl shadow hover:shadow-lg transition border-l-4 border-blue-800"
               >
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-semibold mb-2">
                   {article.title}
                 </h3>
-                <p className="text-gray-600 mb-3">{article.excerpt}</p>
+                <p className=" mb-3">{article.excerpt}</p>
                 <a
                   href={article.link}
-                  className="text-purple-600 font-medium hover:underline"
+                  className="text-blue-800 font-medium hover:underline"
                 >
                   Read more →
                 </a>

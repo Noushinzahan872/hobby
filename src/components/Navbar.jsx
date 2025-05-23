@@ -1,8 +1,9 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../contexts/AuthProvider';
 import Swal from 'sweetalert2';
-import logo from '../assets/4b5591da-dab0-4ac8-80fb-3def19dbabd6.jpeg'
+import logo from '../assets/30696bd8-249f-426e-9c1d-9b32e367bd42.jpeg'
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
 
@@ -24,6 +25,27 @@ const handleLogOut=()=>{
   })
 
 }
+
+const [isDark, setIsDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (isDark) {
+      root.classList.add("dark");
+      root.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      root.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDark]);
+
+  const toggleTheme = () => setIsDark(!isDark);
+
 
     return (
         <div>
@@ -93,7 +115,7 @@ const handleLogOut=()=>{
           {/* <Link to="/" className="font-bold text-xl">
            Hobby-Hub
           </Link> */}
-          <div className='w-[80px]'>
+          <div className='w-[60px] '>
             <img src={logo} alt="logo"></img>
           </div>
         </div>
@@ -144,12 +166,11 @@ const handleLogOut=()=>{
 <img className='w-12 rounded-full' src={`${user ? user.photoURL:''}`} alt=""/>
 
 { user?(<button onClick={handleLogOut} className=' btn btn-primary rounded'>LogOut</button>):
-(<Link to='/login' className="btn  md:block lg:block btn btn-primary rounded">Login</Link>)}
+(<Link to='/login' className="btn  md:block lg:block  btn-primary rounded">Login</Link>)}
+
+<button onClick={toggleTheme}>{isDark?<FaMoon></FaMoon>:<FaSun/>}</button>
         
       </div> 
-
-
-
 
         </div> 
 

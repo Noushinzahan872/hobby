@@ -5,6 +5,7 @@ import BlogSection from './BlogSection';
 import AboutUs from './AboutUs';
 import HobbyCard from './HobbyCard';
 import { useLoaderData } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 
 const Home = () => {
@@ -12,8 +13,14 @@ const Home = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>Home</title>
+          </Helmet>
+          
             <Banner></Banner>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'> 
+            <div>
+              <h2 className='mx-auto w-11/12 text-center text-5xl font-bold mb-10 text-blue-800 '>Featured Sections </h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto w-11/12'> 
                 {/* {
                 hobbes?.map(hobby=><HobbyCard key={hobby._id} hobby={hobby}></HobbyCard>)
                 }      */}
@@ -23,6 +30,7 @@ const Home = () => {
             ))
           }
             </div>   
+            </div>
             <BlogSection></BlogSection>
             <AboutUs></AboutUs>
             <Footer></Footer>

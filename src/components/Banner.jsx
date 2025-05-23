@@ -22,7 +22,6 @@ import  cocking from '../assets/f09d34de-dbb3-4445-80f9-dd55a19e4424.jpeg'
 const Banner = () => {
 
  
-
   return (
 
 <div className="flex flex-col-reverse lg:flex-row items-center gap-6 px-4 lg:px-16 py-10 bg-base-100">
@@ -34,10 +33,10 @@ const Banner = () => {
         
       >
         <h1 className="text-4xl md:text-5xl font-bold text-neutral">
-      Welcome Our Hobby-HUB
+      Welcome Our <span className='text-4xl text-blue-800 md:text-5xl font-bold'>Hobby-HUB</span>
         </h1>
-        <p className="text-lg text-gray-600" data-aos="fade-up">
-          Dive into action-packed sports, engage in intellectual debates, and participate in top-notch workshops and conferences.
+        <p className="text-lg">
+          HobbyHub is your go-to space to explore creative hobbies, connect with fellow enthusiasts, and share your unique talents. Whether it’s art, music, coding, or gardening — your passion has a home here.
         </p>
         <button className="btn btn-primary" data-aos="zoom-in">
           Discover More

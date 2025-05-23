@@ -8,6 +8,7 @@ import { MdDelete } from "react-icons/md";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyGroup = () => {
   const { user,_id} = useContext(AuthContext);
@@ -26,8 +27,8 @@ const MyGroup = () => {
   }, [user]);
 
 //   if (loading) return <Loading></Loading>;
-
   if (groups.length === 0)
+
     return (
       <p className="text-center w-2/6 mx-auto mt-12"> You haven’t created any groups yet. Start by creating one to organize your hobbies!</p>
     );
@@ -66,6 +67,9 @@ const MyGroup = () => {
 
   return (
     <>
+    <Helmet>
+      <title>My Group</title>
+    </Helmet>
     <div className="px-4 sm:px-6 md:px-12 lg:px-24 py-12 overflow-x-auto">
       <h2 className="text-3xl font-bold text-center mb-8">My Groups</h2>
 
@@ -83,7 +87,7 @@ const MyGroup = () => {
           </tr>
         </thead>
         <tbody className="text-center">
-          {groups.map((group, index) => (
+          {groups.slice(0,5).map((group, index) => (
             <tr key={group._id}>
               <td>{index + 1}</td>
               <td className="font-semibold text-nowrap">{group.groupName}</td>

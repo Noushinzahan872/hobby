@@ -4,6 +4,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { FaUser, FaEnvelope } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../contexts/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 
 const CreateGroup = () => {
@@ -64,8 +65,11 @@ const CreateGroup = () => {
 
   return (
     <>
-    <div className="bg-gray-100 min-h-screen py-10 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl p-8">
+    <Helmet>
+      <title>CreateGroup</title>
+    </Helmet>
+    <div className=" min-h-screen py-10 px-4">
+      <div className="max-w-4xl mx-auto shadow-xl rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center text-indigo-700 mb-8">🎯 Create a New Hobby Group</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
 
@@ -90,17 +94,17 @@ const CreateGroup = () => {
                 value={formData.category}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 focus:ring-indigo-400"
+                className="w-full border border-gray-300 rounded-xl px-4 py-2 focus:ring-2 "
               >
                 <option value="">-- Select --</option>
-                <option value="Drawing & Painting">Drawing & Painting 🎨</option>
-                <option value="Photography">Photography 📸</option>
-                <option value="Video Gaming">Video Gaming 🎮</option>
-                <option value="Fishing">Fishing 🎣</option>
-                <option value="Running">Running 🏃</option>
-                <option value="Cooking">Cooking 🍳</option>
-                <option value="Reading">Reading 📖</option>
-                <option value="Writing">Writing ✍️</option>
+                <option value="Drawing & Painting">Drawing & Painting </option>
+                <option value="Photography">Photography </option>
+                <option value="Video Gaming">Video Gaming </option>
+                <option value="Fishing">Fishing </option>
+                <option value="Running">Running </option>
+                <option value="Cooking">Cooking </option>
+                <option value="Reading">Reading </option>
+                <option value="Writing">Writing </option>
               </select>
             </div>
           </div>
@@ -176,8 +180,8 @@ const CreateGroup = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium mb-1">User Name</label>
-              <div className="flex items-center bg-gray-100 border border-gray-300 rounded-xl px-4 py-2">
-                <FaUser className="mr-2 text-gray-500" />
+              <div className="flex items-center border border-gray-300 rounded-xl px-4 py-2">
+                <FaUser className="mr-2" />
                 <input
                   type="text"
                   name="userName"
@@ -190,8 +194,8 @@ const CreateGroup = () => {
 
             <div>
               <label className="block text-sm font-medium mb-1">User Email</label>
-              <div className="flex items-center bg-gray-100 border border-gray-300 rounded-xl px-4 py-2">
-                <FaEnvelope className="mr-2 text-gray-500" />
+              <div className="flex items-center border border-gray-300 rounded-xl px-4 py-2">
+                <FaEnvelope className="mr-2" />
                 <input
                   type="email"
                   name="userEmail"
