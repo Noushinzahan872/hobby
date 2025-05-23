@@ -25,7 +25,7 @@ const UpdateGroup = () => {
 
   // Fetch existing group data by ID
   useEffect(() => {
-    fetch(`http://localhost:3000/hobbes/${id}`)
+    fetch(`https://hubby-server.vercel.app/hobbes/${id}`)
       .then(res => res.json())
       .then(data => {
         setFormData(data);
@@ -56,7 +56,7 @@ const UpdateGroup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch(`http://localhost:3000/hobbes/${id}`, {
+    fetch(`https://hubby-server.vercel.app/hobbes/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

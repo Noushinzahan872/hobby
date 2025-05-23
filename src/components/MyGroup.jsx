@@ -18,11 +18,11 @@ const MyGroup = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/hobbe/${user.email}`)
+      fetch(`https://hubby-server.vercel.app/hobbe/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           setGroups(data);
-          console.log(data)
+          // console.log(data)
         //   setLoading(false);
         });
     }
@@ -46,7 +46,7 @@ const MyGroup = () => {
     }).then((result) => {
 
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/hobbes/${id}`, {
+        fetch(`https://hubby-server.vercel.app/hobbes/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -187,7 +187,7 @@ export default MyGroup;
 //         }).then((result) => {
 //             if (result.isConfirmed) {
 
-//                 fetch(`http://localhost:3000/users/${id}`, {
+//                 fetch(`https://hubby-server.vercel.app/users/${id}`, {
 //                     method: 'DELETE'
 //                 })
 //                     .then(res => res.json())

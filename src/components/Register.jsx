@@ -74,7 +74,7 @@ createUser(email,password)
   //  setUser(user);
 
 //   save profile in db
-fetch('http://localhost:3000/users',{
+fetch('https://hubby-server.vercel.app/users',{
     method:'POST',
     headers:{
         'content-type':'application/json'

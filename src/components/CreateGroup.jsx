@@ -45,7 +45,7 @@ const CreateGroup = () => {
     e.preventDefault();
     console.log('Group Created:', formData);
 
-    fetch('http://localhost:3000/hobbes', {
+    fetch('https://hubby-server.vercel.app/hobbes', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -279,7 +279,7 @@ export default CreateGroup;
 //     console.log('Group Created:', formData);
 //     // Later: POST to backend API
 
-//     fetch('http://localhost:3000/hobbes',{
+//     fetch('https://hubby-server.vercel.app/hobbes',{
 //         method:'POST',
 //         headers:{
 //             'content-type':'application/json'

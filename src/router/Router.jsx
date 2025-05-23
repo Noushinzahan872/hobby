@@ -24,12 +24,12 @@ const router = createBrowserRouter([
     children:[
         {
             index:true,
-            loader:()=>fetch('http://localhost:3000/hobbes'),
+            loader:()=>fetch('https://hubby-server.vercel.app/hobbes'),
             Component:Home,
         },
         {
             path:'allGroup',
-            loader:()=>fetch('http://localhost:3000/hobbes'),
+            loader:()=>fetch('https://hubby-server.vercel.app/hobbes'),
             Component:AllGroup,
         },
         {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         },
         {
             path:'myGroup',
-            loader:()=>fetch('http://localhost:3000/hobbes/'),
+            loader:()=>fetch('https://hubby-server.vercel.app/hobbes/'),
             element:(
               <PrivateRoute>
                 <MyGroup></MyGroup>
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         },
         {
             path:'hobby/:id',
-            loader: ({ params }) => fetch(`http://localhost:3000/hobbes/${params.id}`).then(res => res.json()),
+            loader: ({ params }) => fetch(`https://hubby-server.vercel.app/hobbes/${params.id}`).then(res => res.json()),
             element:(
                 <PrivateRoute>
                     <HobbyDetails></HobbyDetails>
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
         },
         {
             path:'updateGroup/:id',
-             loader: ({ params }) => fetch(`http://localhost:3000/hobbes/${params.id}`).then(res => res.json()),
+             loader: ({ params }) => fetch(`https://hubby-server.vercel.app/hobbes/${params.id}`).then(res => res.json()),
            element:(
                 <PrivateRoute>
                     <UpdateGroup></UpdateGroup>
