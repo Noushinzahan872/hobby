@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FaFacebook, FaGithub, FaLinkedinIn, FaSquareYoutube } from 'react-icons/fa6';
-import logo from '../assets/4b5591da-dab0-4ac8-80fb-3def19dbabd6.jpeg'
+import logo from '../assets/30696bd8-249f-426e-9c1d-9b32e367bd42.jpeg'
 
 
 
@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
 
     <aside>
-    <img className='w-[80px]' src={logo} alt=''></img>
+    <img className='w-[60px]' src={logo} alt=''></img>
     <p>
     Copyright © 2025 - All right reserved
     </p>
