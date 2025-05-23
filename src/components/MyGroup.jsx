@@ -9,6 +9,7 @@ import { Link } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../contexts/AuthProvider";
 import { Helmet } from "react-helmet";
+import Footer from "./Footer";
 
 const MyGroup = () => {
   const { user,_id} = useContext(AuthContext);
@@ -149,7 +150,7 @@ const MyGroup = () => {
         </tbody>
       </table>
     </div>
-   
+   <Footer></Footer>
     </>
   );
 };
