@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
 import Footer from '../components/Footer';
 import { AuthContext } from '../contexts/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
 
@@ -123,7 +124,9 @@ fetch('http://localhost:3000/users',{
 
     return (
         <div>
-       
+       <Helmet>
+        <title>Register</title>
+       </Helmet>
             <div className='flex justify-center min-h-screen items-center'>
            <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <h2 className='text-2xl font-semibold text-center'>Register your account</h2>

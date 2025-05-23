@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
  import { FcGoogle } from "react-icons/fc";
 import Footer from '../components/Footer';
 import { AuthContext } from '../contexts/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 
 const Login = () => {
@@ -68,7 +69,9 @@ const Login = () => {
 
     return (
       <>
-      
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
         <div className='flex justify-center min-h-screen items-center'>
            <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <h2 className='text-2xl font-semibold text-center'>Login your account</h2>
