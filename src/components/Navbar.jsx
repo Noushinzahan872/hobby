@@ -163,7 +163,10 @@ const [isDark, setIsDark] = useState(() => {
      <div className="navbar-end flex gap-2">
 
 
-<img className='w-12 rounded-full' src={`${user ? user.photoURL:''}`} alt=""/>
+<img className='w-12 rounded-full cursor-pointer' src={`${user ? user.photoURL:''}`} alt=""
+title={`${user?.displayName || 'No name'}`}
+/>
+
 
 { user?(<button onClick={handleLogOut} className=' btn btn-primary rounded'>LogOut</button>):
 (<Link to='/login' className="btn  md:block lg:block  btn-primary rounded">Login</Link>)}
