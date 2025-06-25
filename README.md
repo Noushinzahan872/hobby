@@ -1,12 +1,37 @@
-# React + Vite
+# 🎨 HobbyHub — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **HobbyHub**, a creative community platform for hobbyists! This is the **frontend** of the project, built with **React**, **Vite**, **Tailwind CSS**, and **DaisyUI** for blazing-fast performance and beautiful design.
 
-Currently, two official plugins are available:
+🌐 **Live Site**: [https://hobby-group-db6e4.web.app/)  
+📂 **GitHub Repo**: [Frontend on GitHub](https://github.com/Noushinzahan872/artifacts)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+
+- ⚛️ **React** — Core library
+- ⚡ **Vite** — Fast development and build tool
+- 🎨 **Tailwind CSS** — Utility-first CSS framework
+- 🌼 **DaisyUI** — Beautiful prebuilt Tailwind components
+- 🔁 **React Router v7** — Declarative routing
+- 🔐 **Firebase** — Authentication and hosting
+- 📸 **Swiper** — Touch slider
+- 💫 **React Awesome Reveal** — Entrance animations
+- 💡 **React Tooltip** — Tooltips
+- 🍞 **React Toastify** — Toast notifications
+- 🔢 **React CountUp** — Animated number counter
+- 😍 **SweetAlert2 + sweetalert2-react-content** — Stylish alerts
+- 🎨 **React Icons** — Icon packs
+
+---
+
+
+---
+
+## 🔧 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ismail-dev-code/hobby-hub-client-code
+   cd hobby-hub-client-code
