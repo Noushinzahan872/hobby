@@ -3,7 +3,7 @@
 Welcome to **HobbyHub**, a creative community platform for hobbyists! This is the **frontend** of the project, built with **React**, **Vite**, **Tailwind CSS**, and **DaisyUI** for blazing-fast performance and beautiful design.
 
 🌐 **Live Site**: [https://hobby-group-db6e4.web.app/)  
-📂 **GitHub Repo**: [Frontend on GitHub](https://github.com/Noushinzahan872/artifacts)
+📂 **GitHub Repo**: [Frontend on GitHub](https://github.com/Noushinzahan872/hobby)
 
 
 ---
@@ -33,5 +33,4 @@ Welcome to **HobbyHub**, a creative community platform for hobbyists! This is th
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ismail-dev-code/hobby-hub-client-code
-   cd hobby-hub-client-code
+ 
